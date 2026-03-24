@@ -7,6 +7,7 @@ export function layout(title: string, activeNav: string, headExtra: string, body
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>${title} - AI워크코치</title>
   <meta name="description" content="반복 업무를 입력하면 AI가 최적의 도구와 자동화 방법을 추천합니다. 전문 코치의 맞춤형 코칭으로 업무 효율화를 시작하세요.">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
   <link rel="stylesheet" href="/static/style.css">
   ${headExtra}
