@@ -26,8 +26,8 @@ app.get('/api/tables/:table', async (c) => {
       query += ` WHERE email LIKE ? OR name LIKE ? OR id LIKE ?`
       params.push(`%${search}%`, `%${search}%`, `%${search}%`)
     } else if (table === 'tools') {
-      query += ` WHERE name LIKE ? OR category LIKE ? OR description LIKE ? OR keywords LIKE ?`
-      params.push(`%${search}%`, `%${search}%`, `%${search}%`, `%${search}%`)
+      query += ` WHERE name LIKE ? OR category LIKE ? OR description LIKE ?`
+      params.push(`%${search}%`, `%${search}%`, `%${search}%`)
     } else if (table === 'reports') {
       query += ` WHERE submission_id LIKE ? OR id LIKE ?`
       params.push(`%${search}%`, `%${search}%`)
