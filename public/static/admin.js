@@ -214,9 +214,9 @@ document.getElementById('btn-save-pw').addEventListener('click', async () => {
 
 async function saveSetting(key, value) {
   const res = await API.getAll('settings', { limit: 100 });
-  const existing = (res.data || []).find(s => s.setting_key === key);
-  if (existing) { await API.patch('settings', existing.id, { setting_value: value }); }
-  else { await API.create('settings', { id: key, setting_key: key, setting_value: value, description: key }); }
+  const existing = (res.data || []).find(s => (s.setting_key || s.key) === key);
+  if (existing) { await API.patch('settings', existing.id, { key: key, value: value }); }
+  else { await API.create('settings', { id: key, key: key, value: value }); }
   settingsMap[key] = value;
   API.clearSettingsCache();
 }

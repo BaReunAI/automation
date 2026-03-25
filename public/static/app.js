@@ -35,7 +35,7 @@ const API = {
     try {
       const res = await this.getAll('settings', { limit: 100 });
       const map = {};
-      (res.data || []).forEach(s => { if (s.setting_key) map[s.setting_key] = s.setting_value || ''; });
+      (res.data || []).forEach(s => { const k = s.setting_key || s.key; const v = s.setting_value || s.value || ''; if (k) map[k] = v; });
       this._settingsCache = map;
       this._settingsCacheTime = now;
       return map;
