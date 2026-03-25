@@ -7,8 +7,8 @@
   "d1_databases": [
     {
       "binding": "DB",
-      "database_name": "webapp-production",
-      "database_id": "placeholder-id"
+      "database_name": "automation-production",
+      "database_id": "184fff82-c8cd-4702-8bda-d20f61a165c3"
     }
   ]
 }
